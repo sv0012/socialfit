@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Banner from "./components/Banner/Banner";
+import Header from "./components/Header/Header";
+import Videos from "./components/Videos/Videos";
+import './App.css'
+
+
 
 function App() {
+  const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header loading={loading} setLoading={setLoading} setVideos={setVideos} />
+      {
+        (videos.length === 0) ? (
+          <Banner />
+        ) : loading ? (
+          <img className="workout_loader" src="/images/workout.gif" alt="" />
+        ) : (
+          <Videos videos={videos} />
+        )
+      }
+      
     </div>
   );
 }

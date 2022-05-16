@@ -1,0 +1,60 @@
+.header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+
+.logo {
+    height: 40px;
+    width: 40px;
+    padding: 25px;
+
+}
+
+
+.profile_picture {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+.col_2 {
+    width: 750px ;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+}
+
+.search {
+    border: none;
+    width: 100%;
+}
+.search_icon {
+    color: gray;
+    padding:  0px 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.loading_icon {
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
