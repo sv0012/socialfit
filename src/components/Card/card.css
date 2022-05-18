@@ -28,3 +28,17 @@
     display: inline-block;
    
 }
+
+@media (max-width:480px) {
+    .card_container {
+        width: 100%;
+        margin: 20px 5px;
+    }
+
+    .iframe {
+        width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
